@@ -16,40 +16,103 @@
 
     <div class="header_home">
         <div class="posisionbtn">
-            <button type="button" class="btn btn-primary active">Phòng Bàn</button>
-            <button type="button" class="btn btn-primary active">Thực Đơn</button>
-            &nbsp
+            <ul class="nav nav-tabs">
+                <li><a data-toggle="tab" href="#ban">Phòng bàn</a></li>
+                <li><a data-toggle="tab" href="#menu">Thực Đơn</a></li>
+
+            </ul>
+
+            <div class="content_tab">
+                <div id="ban" class="tab-pane fade">
+                    <h3>Menu 1</h3>
+
+                </div>
+                <div id="menu" class="tab-pane fade">
+                    <h3>Menu 2</h3>
+
+                </div>
+            </div>
+
+
             <form class="form-inline d-flex justify-content-center md-form form-sm active-purple-2 mt-2">
                 <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Tìm kiếm"
+                       style="width: 315px ; margin-left: -355px"
                        aria-label="Search">
                 <i class="fas fa-search" aria-hidden="true"></i>
             </form>
-            &emsp;&emsp;&emsp;&emsp;
-            <button type="button" class="btn btn-primary active">Hóa đơn 1</button>
-            &nbsp&nbsp
-            <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-plus"></i></button>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-volume-up"></i></button>
-            &nbsp
-            <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-globe"></i></button>
-            &nbsp
-            <button type="button" class="btn btn-primary btn-circle" style="color: #FFFFFF"><i
-                    class="fas fa-sync-alt"></i></button>
-            &nbsp
-            <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-print"></i></button>
-            &nbsp&nbsp&nbsp
-            <button type="button" class="btn btn-primary btn-circle-lg"><i class="fas fa-user fa-lg"></i></button>
-            &nbsp&nbsp&nbsp
-            <button type="button" class="btn btn-primary btn-circle-lg"><i class="glyphicon glyphicon-list fa-lg"></i>
-            </button>
+            <ul class="nav nav-tabs">
+                <li><a data-toggle="tab" href="#bill1" style="margin-left: 35px">Hóa đơn 1</a></li>
 
+            </ul>
+
+            <div class="content_tab2">
+                <form class="form-inline d-flex justify-content-center md-form form-sm active-purple-2 mt-2">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Tìm kiếm"
+                           style="height: 30px;width: 265px ; margin-left: 119px; margin-top: 5px"
+                           aria-label="Search">
+                    <i class="fas fa-search" aria-hidden="true" style="color: #9EA4EC"></i>
+                </form>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Bảng giá
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Giá gốc</a></li>
+                        <li><a href="#">Giá khuyến mãi</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle1" type="button" data-toggle="dropdown">Loại khách
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu " style="margin-left:459px ; margin-top: -37px">
+                        <li><a href="#">Khách mới</a></li>
+                        <li><a href="#">Khách thân thiết</a></li>
+                    </ul>
+                </div>
+                <div class="note" style="height: 70px;background-color: gainsboro ; margin-top: 250px;display: flex">
+                    <button type="button" class="btn btn-primary btn-circle" style="margin-top: 33px;margin-left: 15px">
+                        <i class="fa fa-pencil"></i> &nbsp; &nbsp;
+                        Ghi chú
+                    </button>
+                    <button type="button" class="btn btn-primary btn-circle" style="margin-top: 33px;margin-left: 70px">
+                        <i class="fas fa-history"></i> &nbsp;&nbsp;
+                        Lịch sử
+                    </button>
+                </div>
+                <p class="total">Tổng tiền: </p>
+
+                <button type="button" class="btn btn-primary btn-circle"
+                        style="width: 125px;margin-left: 480px;margin-top: -60px">
+                    Tách ghép đơn
+                </button>
+                <div class="sellinfo"  >
+                    <div class="sell"><p class="sellbill">Thanh Toán</p></div>
+                    <div class="info"><p class="sellbill">Thông Báo</p></div>
+                </div>
+            </div>
+            <div class="btnclick">
+                <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-plus"></i>
+                </button>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-volume-up"></i></button>
+                &nbsp
+                <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-globe"></i></button>
+                &nbsp
+                <button type="button" class="btn btn-primary btn-circle" style="color: #FFFFFF"><i
+                        class="fas fa-sync-alt"></i></button>
+                &nbsp
+                <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-print"></i></button>
+                &nbsp
+                <button type="button" class="btn btn-primary btn-circle-lg"><i class="fas fa-user fa-lg"></i></button>
+                &nbsp
+                <button type="button" class="btn btn-primary btn-circle-lg"><i
+                        class="glyphicon glyphicon-list fa-lg"></i>
+                </button>
+
+
+            </div>
         </div>
     </div>
-    <div class="body_home">
-        <div class="content_menu"></div>
-        <div class="content_bill"></div>
-    </div>
-    <div class="footer_home"></div>
+<div class="footer" style=" height: 30px; width: 100%;margin-top: 460px;text-align: center;margin-left: -115px">Hotline: 0927007791</div>
 </div>
 </body>
 </html>
