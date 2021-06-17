@@ -188,15 +188,15 @@ border: dotted 2px #dcdee3;
     font-size: 14px;
 
 }
-.form1{
-    margin-bottom: 10px;
-    width: 400px;
-}
-.form1 input{
-    width: 100%;
-    outline: none;
-    border: solid 1px #dcdee3;
-}
+/*.form1{*/
+/*    margin-bottom: 10px;*/
+/*    width: 400px;*/
+/*}*/
+/*.form1 input{*/
+/*    width: 100%;*/
+/*    outline: none;*/
+/*    border: solid 1px #dcdee3;*/
+/*}*/
 .home-picture{
     width: 50px;
 }
