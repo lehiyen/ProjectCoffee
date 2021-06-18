@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/search")
@@ -19,7 +20,12 @@ public class SearchController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String txtSearch = request.getParameter("txt");
         SearchService search = new SearchService();
-        List<Product> list = search.findByName(txtSearch);
+        List<Product> list = null;
+        try {
+            list = search.findByName(txtSearch);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         request.setAttribute("listP", list);
         request.getRequestDispatcher("store/storePage.jsp").forward(request, response);
 

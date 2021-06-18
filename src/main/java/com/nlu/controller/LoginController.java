@@ -38,7 +38,7 @@ public class LoginController extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("auth", user);
             if (user.getPhanQuyen().equals("QuanLy")) {
-                request.getRequestDispatcher("/admin-page/quanlihoadon.jsp").forward(request, response);
+                request.getRequestDispatcher("/quanlihoadon.jsp").forward(request, response);
             }
             if (user.getPhanQuyen().equals("Nhanvien")) {
                 response.sendRedirect("/home");
