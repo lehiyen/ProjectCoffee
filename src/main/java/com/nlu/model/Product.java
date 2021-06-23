@@ -16,6 +16,6 @@ public class Product {
         private String image;
         private int price;
 
-        public Product(String idProduct, String nameProduct, String idItems, String image, int price) {
-        }
+//        public Product(String idProduct, String nameProduct, String idItems, String image, int price) {
+//        }
 }

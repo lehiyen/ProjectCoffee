@@ -79,7 +79,7 @@ body,html {
 .fa-lg:before{
     justify-content: center;
     align-items: center;
-    margin-left: -8px;
+    margin-left: -9px;
     position: absolute;
     margin-top: -16px;
 }

@@ -18,7 +18,6 @@ import java.util.List;
 
 @WebServlet(urlPatterns = "/login")
 public class LoginController extends HttpServlet {
-    ProductService productService = new ProductService();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);
@@ -38,7 +37,7 @@ public class LoginController extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("auth", user);
             if (user.getPhanQuyen().equals("QuanLy")) {
-                request.getRequestDispatcher("/quanlihoadon.jsp").forward(request, response);
+                response.sendRedirect("/quanli");
             }
             if (user.getPhanQuyen().equals("Nhanvien")) {
                 response.sendRedirect("/home");

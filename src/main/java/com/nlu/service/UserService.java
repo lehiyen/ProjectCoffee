@@ -25,10 +25,10 @@ public class UserService {
             ps.setString(2, password);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                user = new User(rs.getInt(1), rs.getString(2), rs.getString(3),
+                user = new User(rs.getString(1), rs.getString(2), rs.getString(3),
                         rs.getString(4),
                         rs.getString(5),
-                        rs.getInt(6)
+                        rs.getString(6)
                 );
                 return user;
             }
@@ -39,9 +39,58 @@ public class UserService {
         return null;
     }
 
+    public User checkAccountExist(String username) {
+        Connection conn = getConnection();
+        String query = "SELECT * FROM user WHERE UserName= ?";
+        User user = new User();
+
+        try {
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                user = new User(rs.getString(1), rs.getString(2), rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6)
+                );
+                return user;
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
+    public String signup(User user) {
+        Connection conn = getConnection();
+        String result = "data ok";
+        String query = "INSERT INTO user VALUES (?,?,?,?,?,?)";
+        try {
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, user.getUserid());
+            ps.setString(2, user.getUserName());
+            ps.setString(3, user.getChucVu());
+            ps.setString(4, user.getPhanQuyen());
+            ps.setString(5, user.getPassword());
+            ps.setString(6, user.getPhone());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            result = "data not ok";
+
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         UserService userService = new UserService();
-        User user = userService.getUser("khanh", "123");
+        User u = new User("789", "khanh2", "NhanVien", "QuanLy", "789", "7894561237");
+        userService.signup(u);
+        User user = userService.getUser("khanh2", "789");
         System.out.println(user.toString());
+
+
     }
 }

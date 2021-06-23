@@ -20,8 +20,7 @@
         <input class="un " type="text" align="center" required placeholder="Tên người dùng" name="username"/>
         <input class="pass" type="password" align="center" required placeholder="Mật khẩu" name="password"/>
         <input value="login" type="submit" class="submit" ></input>
-        <a class="forgot" align="center" href="">Forgot <i class = "fas fa-key"></i> </a>
-        <a class="signup" align="center" href="">Sign up  </a>
+        <a  class="forgot" align="center" href="">Forgot <i class = "fas fa-key"></i> </a>
         <p class="hotline" align="center" >Hotline 0927007791<a href="#"></a> </p>
     </form>
 
