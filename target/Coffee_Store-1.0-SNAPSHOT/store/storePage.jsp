@@ -2,6 +2,9 @@
 <%@ page import="com.nlu.model.Product" %>
 <%@ page import="com.nlu.service.ProductService" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.nlu.service.CartService" %>
+<%@ page import="java.util.Collection" %>
+<%@ page import="com.nlu.model.Cart" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +19,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>HOME</title>
+    <style>
+        td{
+            padding: 5px 0px;
+        }
+    </style>
 </head>
+<style>
+    label:hover {
+        color: blue;
+    }
+
+    .tour-mg {
+        margin-bottom: 20px;
+
+    }
+
+    .bor-tour {
+        border: 1px solid #dedbdb;
+        padding-bottom: 10px;
+
+    }
+
+    .bor-tour:hover {
+        position: absolute;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }
+</style>
 <body>
 
 <div class="containerHome">
@@ -30,19 +60,28 @@
             </ul>
             <div class="tab-content"
                  style="box-shadow: 0px 19px 22px -2px rgba(255,135,23,0.44);width: 575px; height: 445px;border-radius: 13px;margin-left: -205px;   margin-top: 38px">
+                    <div id="menu" class="tab-pane fade in active" style="color: black;padding: 5px">
 
-                <div id="menu" class="tab-pane fade in active" style="color: black;padding: 5px">
-                    <c:forEach items="${listP}" var="o">
-                        <div class="col-md-2 column productbox" style="width: 120px;height: 120px;padding: 5px">
-                            <img src="${o.image}" class="img-responsive">
-                            <div class="producttitle">${o.nameProduct}</div>
-                            <div class="productprice">
-                                <div class="pricetext">${o.price}
+
+
+                            <c:forEach items="${data}" var="o">
+                                <div class="col-md-2 column productbox tour-mg"
+                                     style="width: 120px;height: 120px;padding: 5px">
+                                    <div class="bor-tour">
+
+                                        <img src="${o.image}" class="img-responsive">
+                                        <div class="producttitle">${o.nameProduct}</div>
+                                        <div class="productprice">
+                                            <div class="pricetext">${o.price}
+                                            </div>
+                                            <a href="/addcart?id=${o.idProduct}">Chọn</a>
+                                        </div>
+
+                                    </div>
+
                                 </div>
-                            </div>
-                        </div>
-                    </c:forEach>
-                </div>
+                            </c:forEach>
+                    </div>
                 <div id="ban" class="tab-pane fade">
                 </div>
             </div>
@@ -65,29 +104,54 @@
                  style="box-shadow: 0px 19px 22px -2px rgba(255,135,23,0.44);width: 662px; height: 445px;border-radius: 13px;margin-left: -114px;   margin-top: 38px">
                 <div id="bill" class="tab-pane fade in active">
 
-                </div>
 
-                <form class="form-inline d-flex justify-content-center md-form form-sm active-purple-2 mt-2">
-                    <input name="txt" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Tìm kiếm"
-                           style="height: 30px;width: 265px ; margin-left: 119px; margin-top: 5px"
-                           aria-label="Search">
-                    <i class="fas fa-search" aria-hidden="true" style="color: #9EA4EC"></i>
-                </form>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Bảng giá
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Giá gốc</a></li>
-                        <li><a href="#">Giá khuyến mãi</a></li>
-                    </ul>
-                </div>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle1" type="button" data-toggle="dropdown">Loại khách
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu " style="margin-left:459px ; margin-top: -37px">
-                        <li><a href="#">Khách mới</a></li>
-                        <li><a href="#">Khách thân thiết</a></li>
-                    </ul>
+                    <form class="form-inline d-flex justify-content-center md-form form-sm active-purple-2 mt-2">
+                        <input name="txt" class="form-control form-control-sm mr-3 w-75" type="text"
+                               placeholder="Tìm kiếm"
+                               style="height: 30px;width: 265px ; margin-left: 119px; margin-top: 5px"
+                               aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true" style="color: #9EA4EC"></i>
+                    </form>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Bảng giá
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Giá gốc</a></li>
+                            <li><a href="#">Giá khuyến mãi</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle1" type="button" data-toggle="dropdown">Loại khách
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu " style="margin-left:459px ; margin-top: -37px">
+                            <li><a href="#">Khách mới</a></li>
+                            <li><a href="#">Khách thân thiết</a></li>
+                        </ul>
+                    </div>
+
+                    <table style="margin-left: 47px;position: absolute" >
+
+                        <tbody>
+                        <% Cart cart = Cart.getCart(session);
+                            Collection<Product> data = cart.getData();
+                            request.setAttribute("data", data);
+                        %>
+                        <c:forEach items="${data}" var="o">
+                            <tr>
+                                <td class="tdname" style="width: 219px">${o.nameProduct}</td>
+                                <td class="tdquantity"style="width: 80px">${o.quantity}</td>
+                                <td class="tdprice"style="width: 128px">${o.price}</td>
+                                <td class="tdpricetotal"style="width: 144px">${o.quantity * o.price}</td>
+                                <td class="tdtrash">
+                                    <a href="/remove?id=${o.idProduct}"><i class="fas fa-trash-alt"></i></a>
+
+                                </td>
+
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="note"
                      style="height: 70px;background-color: gainsboro ; margin-top: 250px;display: flex;width: 643px;margin-left: 19px">
@@ -101,7 +165,7 @@
                     </button>
 
                 </div>
-                &nbsp; &nbsp; &nbsp; <p class="total" style="margin-left: 231px;margin-top: -50px">Tổng tiền: </p>
+                &nbsp; &nbsp; &nbsp; <p class="total" style="margin-left: 231px;margin-top: -50px">Tổng tiền: ${cart.total()}</p>
 
                 <button type="button" class="btn btn-primary btn-circle"
                         style="width: 125px;margin-left: 480px;margin-top: -60px">

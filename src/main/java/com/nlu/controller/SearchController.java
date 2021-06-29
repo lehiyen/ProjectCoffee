@@ -26,7 +26,7 @@ public class SearchController extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        request.setAttribute("listP", list);
+        request.setAttribute("data", list);
         request.getRequestDispatcher("store/storePage.jsp").forward(request, response);
 
     }

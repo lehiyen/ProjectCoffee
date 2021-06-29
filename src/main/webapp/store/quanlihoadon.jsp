@@ -114,7 +114,7 @@
                         <ul aria-expanded="false" class="collapse  first-level">
                             <li class="sidebar-item"><a href="/store/signUp.jsp" class="sidebar-link"><span
                                     class="hide-menu"> Thêm tài khoản  </span></a></li>
-                            <li class="sidebar-item"><a href="TongQuanTK.html" class="sidebar-link"><span
+                            <li class="sidebar-item"><a href="/store/OverViewUser.jsp" class="sidebar-link"><span
                                     class="hide-menu">Tổng quan </span></a></li>
 
 

@@ -32,7 +32,8 @@ public class SearchService implements Repository<Product> {
                         rs.getString(2),
                         rs.getString(3),
                         rs.getString(4),
-                        rs.getInt(5));
+                        rs.getInt(5),
+                        rs.getInt(6));
                 list.add(product);
             }
             returnConnection(connection);
@@ -47,7 +48,7 @@ public class SearchService implements Repository<Product> {
     public static void main(String[] args) throws SQLException {
 
         SearchService se = new SearchService();
-        List<Product> list = se.findByName("M");
+        List<Product> list = se.findByName("ma");
         for (Product o : list) {
             System.out.println(o);
         }
