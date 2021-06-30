@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -121,7 +122,7 @@
                         </ul>
                     </li>
                     <li class="sidebar-item"><a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                href="../admin-page/quanlihoadon.html" aria-expanded="false"><i
+                                                href="admin-page/quanlihoadon.html" aria-expanded="false"><i
                             class="mdi mdi-move-resize-variant"></i><span class="hide-menu">Quản lý hóa đơn</span></a>
 
                     </li>
@@ -182,47 +183,18 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+                                    <c:forEach items="${listB}" var="p">
                                     <tr>
-                                        <td><a href="../admin-page/chiTietHoaDon.html">11234H2</a></td>
-                                        <td>Nhân Võ</td>
+                                        <td><a href="/detailBill?id=${p.id}">${p.id}</a></td>
+                                        <td>${p.name}</td>
 
-                                        <td>20/11/2020</td>
+                                        <td>${p.date}</td>
 
                                         <td><i class="fas fa-trash-alt hover-icon icon-delete"></i><i
                                                 class="far fa-edit"></i></td>
 
                                     </tr>
-                                    <tr>
-                                        <td><a href="../admin-page/chiTietHoaDon.html">11564H12</a></td>
-                                        <td>Nhân Nguyễn</td>
-
-                                        <td>20/11/2019</td>
-
-
-                                        <td><i class="fas fa-trash-alt hover-icon icon-delete"></i><i
-                                                class="far fa-edit"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="../admin-page/chiTietHoaDon.html">11234P2</a></td>
-                                        <td>Nhân Tâm</td>
-
-                                        <td>20/3/2020</td>
-
-
-                                        <td><i class="fas fa-trash-alt hover-icon icon-delete"></i><i
-                                                class="far fa-edit"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="../admin-page/chiTietHoaDon.html">11234FH2</a></td>
-                                        <td>Nhân Từ</td>
-
-                                        <td>3/11/2020</td>
-
-
-                                        <td><i class="fas fa-trash-alt hover-icon icon-delete"></i><i
-                                                class="far fa-edit"></i></td>
-                                    </tr>
-
+                                    </c:forEach>
 
                                     </tbody>
 
