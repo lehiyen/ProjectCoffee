@@ -120,10 +120,11 @@
                                                 href="javascript:void(0)" aria-expanded="false"> <i
                             class="fas fa-address-book"></i><span class="hide-menu">Quản lí tài khoản </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/store/OverViewUser.jsp" class="sidebar-link"><span
+                                    class="hide-menu">Tổng quan </span></a></li>
                             <li class="sidebar-item"><a href="/store/signUp.jsp" class="sidebar-link"><span
                                     class="hide-menu"> Thêm tài khoản  </span></a></li>
-                            <li class="sidebar-item"><a href="TongQuanTK.html" class="sidebar-link"><span
-                                    class="hide-menu">Tổng quan </span></a></li>
+
 
 
                         </ul>
@@ -155,17 +156,17 @@
         <!-- Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
         <div class="col-md-5" style="width: 490px">
-            <form action="/store/signup" method="post">
+            <form action="/signUp" method="post">
                 <fieldset>
                     <h3 class="text-uppercase pull-center">Thêm Tài Khoản</h3>
-                    <div class="form-group" style="padding: 5px">
+                    <div class="form-group" style="padding: 5px;width: 492px">
                         <input required type="text" name="userID" id="userID" class="form-control input-lg" placeholder="userID">
                         <p class="text-danger"style="color: red;font-size: 16px;margin-left: 75px">${mes}</p>
-                        <input required type="text" name="username" id="username" class="form-control input-lg"
+                        <input required type="text" name="userName" id="userName" class="form-control input-lg"
                                placeholder="username">
 
-                        <input required type="text" name="chucvu" id="chucvu" class="form-control input-lg" placeholder="Job">
-                        <input required type="text" name="phanquyen" id="phanquyen" class="form-control input-lg"
+                        <input required type="text" name="chucVu" id="chucVu" class="form-control input-lg" placeholder="Job"><p class="text-danger"style="color: red;font-size: 16px;margin-left: 75px">${messs}</p>
+                        <input required type="text" name="phanQuyen" id="phanQuyen" class="form-control input-lg"
                                placeholder="role">
 
                         <input required type="password" name="password" id="password" class="form-control input-lg"

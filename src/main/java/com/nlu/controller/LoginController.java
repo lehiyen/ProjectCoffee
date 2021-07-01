@@ -33,13 +33,14 @@ public class LoginController extends HttpServlet {
             request.setAttribute("mess", "Bạn đã nhập sai tên hoặc mật khẩu");
             request.getRequestDispatcher("/").forward(request,response);
         }
-        if (user != null) {
+        else{
             HttpSession session = request.getSession();
-            session.setAttribute("auth", user);
             if (user.getPhanQuyen().equals("QuanLy")) {
+                session.setAttribute("acc",user);
                 response.sendRedirect("/quanli");
             }
             if (user.getPhanQuyen().equals("Nhanvien")) {
+                session.setAttribute("acc",user);
                 response.sendRedirect("/home");
             }
 

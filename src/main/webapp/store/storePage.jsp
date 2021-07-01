@@ -80,6 +80,7 @@
 
                         </div>
                     </c:forEach>
+
                 </div>
                 <div id="ban" class="tab-pane fade">
                 </div>
@@ -179,7 +180,7 @@
             <div class="btnclick">
                 <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-plus"></i>
                 </button>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                 <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-volume-up"></i></button>
                 &nbsp
                 <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-globe"></i></button>
@@ -188,11 +189,12 @@
                         class="fas fa-sync-alt"></i></button>
                 &nbsp
                 <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-print"></i></button>
-                &nbsp
-                <button type="button" class="btn btn-primary btn-circle-lg"><i class="fas fa-user fa-lg"></i>
+                <button type="button" class="btn btn-primary btn-circle " style="width: 124px">
+                    <c:if test="${sessionScope.acc!=null}">
 
+                        HI! ${sessionScope.acc.userName}
+                    </c:if>
                 </button>
-                &nbsp
                 <a href="/store/quanlihoadon.jsp">
                     <button type="button" class="btn btn-primary btn-circle-lg"><i
                             class="glyphicon glyphicon-list fa-lg"></i>

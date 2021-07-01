@@ -2,9 +2,11 @@ package com.nlu.controller;
 
 import com.nlu.model.Cart;
 import com.nlu.model.Product;
+import com.nlu.model.User;
 import com.nlu.service.CartService;
 import com.nlu.service.ProductService;
 import com.nlu.service.SearchService;
+import com.nlu.service.UserService;
 import lombok.SneakyThrows;
 
 import javax.servlet.RequestDispatcher;
@@ -29,6 +31,7 @@ public class StoreController extends HttpServlet {
         List<Product> products = productService.findAll();
         HttpSession session = request.getSession();
         session.setAttribute("data", products);
+
         request.getRequestDispatcher("store/storePage.jsp").forward(request, response);
     }
 }

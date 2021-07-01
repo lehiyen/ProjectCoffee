@@ -39,28 +39,26 @@ public class UserService {
         return null;
     }
 
-    public User checkAccountExist(String username) {
+    public boolean checkAccountExist(String userName) {
         Connection conn = getConnection();
-        String query = "SELECT * FROM user WHERE UserName= ?";
-        User user = new User();
+        String query = "SELECT UserName FROM user WHERE  UserName = ?";
 
         try {
             PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, username);
+            ps.setString(1,userName);
             ResultSet rs = ps.executeQuery();
+            String user = " ";
             while (rs.next()) {
-                user = new User(rs.getString(1), rs.getString(2), rs.getString(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getString(6)
-                );
-                return user;
+                user = rs.getString(1);
+            }
+            if(user.equals(userName)){
+                return true;
             }
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        return null;
+        return false;
     }
 
     public String signup(User user) {
@@ -76,13 +74,16 @@ public class UserService {
             ps.setString(5, user.getPassword());
             ps.setString(6, user.getPhone());
             ps.executeUpdate();
+
         } catch (SQLException e) {
             e.printStackTrace();
+
             result = "data not ok";
 
         }
         return result;
     }
+
     public List<User> findAll() {
         List<User> list = new ArrayList<>();
         String query = "SELECT * FROM user";
@@ -100,7 +101,7 @@ public class UserService {
                         rs.getString(6));
                 list.add(u);
             }
-            returnConnection(connection);
+//            returnConnection(connection);
             return list;
         } catch (SQLException e) {
             System.out.println(e);
@@ -108,13 +109,22 @@ public class UserService {
         }
 
     }
+
     public static void main(String[] args) {
         UserService userService = new UserService();
-       List<User> u = userService.findAll();
-       for (User us : u){
-           System.out.println(us);
-       }
 
+//       System.out.println();
+//       System.out.println();
+//        User us = new User("8889", "khanh5", "QuanLy", "QuanLy", "789", "465123794");
+//        String user = userService.signup(us);
+//        System.out.println(user);
+//        List<User> u = userService.findAll();
+//        for (User use : u){
+//            System.out.println(use.toString());
+//        }
+//        User u = userService.checkAccountExist("yennhi");
+//        System.out.println(u.toString());
 
     }
+
 }

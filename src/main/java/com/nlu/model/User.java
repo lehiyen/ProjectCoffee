@@ -12,14 +12,11 @@ public class User {
     private String userid;
     private String userName;
     private String chucVu;
-    private String PhanQuyen;
+    private String phanQuyen;
     private String password;
     private String phone;
 
 //    public User(int userid, String userName, String chucVu, String PhanQuyen, String password, int phone) {
 //    }
 
-    public String getPhanQuyen() {
-        return this.PhanQuyen;
-    }
 }

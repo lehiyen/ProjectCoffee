@@ -56,7 +56,8 @@
                     <b class="logo-icon p-l-10">
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
-                        <img class="logo-admin" src="../admin-page/assets/images/logo-icon.jpg" alt="homepage" class="light-logo"/>
+                        <img class="logo-admin" src="../admin-page/assets/images/logo-icon.jpg" alt="homepage"
+                             class="light-logo"/>
 
                     </b>
                     <!--End Logo icon -->
@@ -69,6 +70,13 @@
 
                 </a>
 
+                <button type="button" class="btn btn-danger"
+                        style="width: 124px;position: absolute;margin-left: 1077px;margin-top: -51px">
+                    <c:if test="${sessionScope.acc!=null}">
+
+                        HI! ${sessionScope.acc.userName}
+                    </c:if>
+                </button>
                 <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
                    data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                    aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
@@ -112,10 +120,10 @@
                                                 href="javascript:void(0)" aria-expanded="false"> <i
                             class="fas fa-address-book"></i><span class="hide-menu">Quản lí tài khoản </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="/store/signUp.jsp" class="sidebar-link"><span
-                                    class="hide-menu"> Thêm tài khoản  </span></a></li>
                             <li class="sidebar-item"><a href="/store/OverViewUser.jsp" class="sidebar-link"><span
                                     class="hide-menu">Tổng quan </span></a></li>
+                            <li class="sidebar-item"><a href="/store/signUp.jsp" class="sidebar-link"><span
+                                    class="hide-menu"> Thêm tài khoản  </span></a></li>
 
 
                         </ul>

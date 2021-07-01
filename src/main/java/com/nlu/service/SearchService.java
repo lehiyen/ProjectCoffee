@@ -36,7 +36,7 @@ public class SearchService implements Repository<Product> {
                         rs.getInt(6));
                 list.add(product);
             }
-            returnConnection(connection);
+//            returnConnection(connection);
             return list;
         } catch (SQLException e) {
             System.out.println(e);

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
@@ -113,10 +114,10 @@
                                                 href="javascript:void(0)" aria-expanded="false"> <i
                             class="fas fa-address-book"></i><span class="hide-menu">Quản lí tài khoản </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="/store/signUp.jsp" class="sidebar-link"><span
-                                    class="hide-menu"> Thêm tài khoản  </span></a></li>
                             <li class="sidebar-item"><a href="/store/OverViewUser.jsp" class="sidebar-link"><span
                                     class="hide-menu">Tổng quan </span></a></li>
+                            <li class="sidebar-item"><a href="/store/signUp.jsp" class="sidebar-link"><span
+                                    class="hide-menu"> Thêm tài khoản  </span></a></li>
 
 
                         </ul>
@@ -170,44 +171,40 @@
 
                     <div class="card">
                         <div class="card-body">
-
                             <div class="table-responsive">
                                 <table id="zero_config" class="table table-striped table-bordered">
+
+
                                     <thead>
                                     <tr>
                                         <th>UserID</th>
                                         <th>Tên</th>
                                         <th>Chức Vụ</th>
-                                        <th>Phân quyền</th>
+                                        <th>Phân Quyền</th>
                                         <th>Mật Khẩu</th>
                                         <th>sđt</th>
 
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <form action="/quanli/user" method="post">
-                                        <c:forEach items="${listU}" var="o">
-                                            <tr>
-                                                <td>${o.userid}</td>
-                                                <td>${o.userName}</td>
+                                    <c:forEach items="${listU}" var="o">
+                                        <tr>
+                                            <td>${o.userid}</td>
+                                            <td>${o.userName}</td>
 
-                                                <td>${o.chucVu}</td>
+                                            <td>${o.chucVu}</td>
 
-                                                <td>${o.PhanQuyen}</td>
-                                                <td>${o.password}</td>
-                                                <td>${o.phone}</td>
+                                            <td>${o.phanQuyen}</td>
+                                            <td>${o.password}</td>
+                                            <td>${o.phone}</td>
 
-                                            </tr>
-                                        </c:forEach>
-
-                                    </form>
+                                        </tr>
+                                    </c:forEach>
                                     </tbody>
-
                                 </table>
 
 
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -229,9 +226,6 @@
         <!-- ============================================================== -->
         <!-- footer -->
         <!-- ============================================================== -->
-        <footer class="footer text-center">
-            All Rights Reserved by Gropu 32. Designed and Developed by <a href="https://wrappixel.com">VYN</a>.
-        </footer>
         <!-- ============================================================== -->
         <!-- End footer -->
         <!-- ============================================================== -->

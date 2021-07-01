@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>HOME</title>
     <style>
-        td{
+        td {
             padding: 5px 0px;
         }
     </style>
@@ -60,28 +60,28 @@
             </ul>
             <div class="tab-content"
                  style="box-shadow: 0px 19px 22px -2px rgba(255,135,23,0.44);width: 575px; height: 445px;border-radius: 13px;margin-left: -205px;   margin-top: 38px">
-                    <div id="menu" class="tab-pane fade in active" style="color: black;padding: 5px">
+                <div id="menu" class="tab-pane fade in active" style="color: black;padding: 5px">
 
 
+                    <c:forEach items="${data}" var="o">
+                        <div class="col-md-2 column productbox tour-mg"
+                             style="width: 120px;height: 120px;padding: 5px">
+                            <div class="bor-tour">
 
-                            <c:forEach items="${data}" var="o">
-                                <div class="col-md-2 column productbox tour-mg"
-                                     style="width: 120px;height: 120px;padding: 5px">
-                                    <div class="bor-tour">
-
-                                        <img src="${o.image}" class="img-responsive">
-                                        <div class="producttitle">${o.nameProduct}</div>
-                                        <div class="productprice">
-                                            <div class="pricetext">${o.price}
-                                            </div>
-                                            <a href="/addcart?id=${o.idProduct}">Chọn</a>
-                                        </div>
-
+                                <img src="${o.image}" class="img-responsive">
+                                <div class="producttitle">${o.nameProduct}</div>
+                                <div class="productprice">
+                                    <div class="pricetext">${o.price}
                                     </div>
-
+                                    <a href="/addcart?id=${o.idProduct}">Chọn</a>
                                 </div>
-                            </c:forEach>
-                    </div>
+
+                            </div>
+
+                        </div>
+                    </c:forEach>
+
+                </div>
                 <div id="ban" class="tab-pane fade">
                 </div>
             </div>
@@ -130,7 +130,7 @@
                         </ul>
                     </div>
 
-                    <table style="margin-left: 47px;position: absolute" >
+                    <table style="margin-left: 47px;position: absolute">
 
                         <tbody>
                         <% Cart cart = Cart.getCart(session);
@@ -140,9 +140,9 @@
                         <c:forEach items="${data}" var="o">
                             <tr>
                                 <td class="tdname" style="width: 219px">${o.nameProduct}</td>
-                                <td class="tdquantity"style="width: 80px">${o.quantity}</td>
-                                <td class="tdprice"style="width: 128px">${o.price}</td>
-                                <td class="tdpricetotal"style="width: 144px">${o.quantity * o.price}</td>
+                                <td class="tdquantity" style="width: 80px">${o.quantity}</td>
+                                <td class="tdprice" style="width: 128px">${o.price}</td>
+                                <td class="tdpricetotal" style="width: 144px">${o.quantity * o.price}</td>
                                 <td class="tdtrash">
                                     <a href="/remove?id=${o.idProduct}"><i class="fas fa-trash-alt"></i></a>
 
@@ -165,7 +165,8 @@
                     </button>
 
                 </div>
-                &nbsp; &nbsp; &nbsp; <p class="total" style="margin-left: 231px;margin-top: -50px">Tổng tiền: ${cart.total()}</p>
+                &nbsp; &nbsp; &nbsp; <p class="total" style="width: 250px;margin-left: 231px;margin-top: -50px">Tổng
+                tiền: ${cart.total()}</p>
 
                 <button type="button" class="btn btn-primary btn-circle"
                         style="width: 125px;margin-left: 480px;margin-top: -60px">
@@ -179,7 +180,7 @@
             <div class="btnclick">
                 <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-plus"></i>
                 </button>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                 <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-volume-up"></i></button>
                 &nbsp
                 <button type="button" class="btn btn-primary btn-circle"><i class="fas fa-globe"></i></button>
@@ -188,11 +189,12 @@
                         class="fas fa-sync-alt"></i></button>
                 &nbsp
                 <button type="button" class="btn btn-primary btn-circle"><i class="fa fa-print"></i></button>
-                &nbsp
-                <button type="button" class="btn btn-primary btn-circle-lg"><i class="fas fa-user fa-lg"></i>
+                <button type="button" class="btn btn-primary btn-circle " style="width: 124px">
+                    <c:if test="${sessionScope.acc!=null}">
 
+                        HI! ${sessionScope.acc.userName}
+                    </c:if>
                 </button>
-                &nbsp
                 <a href="/store/quanlihoadon.jsp">
                     <button type="button" class="btn btn-primary btn-circle-lg"><i
                             class="glyphicon glyphicon-list fa-lg"></i>
