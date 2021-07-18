@@ -15,7 +15,15 @@ import java.util.Map;
 @AllArgsConstructor
 public class Cart implements Serializable {
     Map<String, Product> data = new HashMap<>();
+    Map<String, Integer> quantity = new HashMap<>();
 
+    /*
+     * 1 - cut
+     * 2 - cho
+     *
+     * 1 - 2
+     * 2 - 6
+     * */
     public Cart() {
 
     }
@@ -23,7 +31,7 @@ public class Cart implements Serializable {
     public void put(Product p) {
         if (p == null) return;
         if (data.containsKey(p.getIdProduct())) {
-         data.get(p.getIdProduct()).add();
+            data.get(p.getIdProduct()).add();
             return;
         }
         p.setQuantity(1);
@@ -31,16 +39,29 @@ public class Cart implements Serializable {
     }
 
 
-    public void update(String id, int quantity) {
-        if (quantity < 0) return;
-        if (data.containsKey(id)) data.get(id).setQuantity(quantity);
+    public void addQuantity(String id, int quantity) {
+
+        if (data.containsKey(id))
+            data.get(id).setQuantity(data.get(id).getQuantity() + quantity);
+    }
+
+    public void SubQuantity(String id, int quantity) {
+
+        if (data.containsKey(id)) {
+            data.get(id).setQuantity(data.get(id).getQuantity() - quantity);
+            if (data.get(id).getQuantity() < 1) {
+                data.remove(id);
+            }
+
+        }
     }
 
     public void remove(String id) {
         data.remove(id);
     }
 
-    public  long total() {
+
+    public long total() {
         long sum = 0;
         for (Product p : data.values()) {
             sum += p.getPrice() * p.getQuantity();

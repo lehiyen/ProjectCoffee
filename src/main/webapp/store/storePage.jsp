@@ -139,12 +139,27 @@
                         %>
                         <c:forEach items="${data}" var="o">
                             <tr>
-                                <td class="tdname" style="width: 219px">${o.nameProduct}</td>
-                                <td class="tdquantity" style="width: 80px">${o.quantity}</td>
-                                <td class="tdprice" style="width: 128px">${o.price}</td>
-                                <td class="tdpricetotal" style="width: 144px">${o.quantity * o.price}</td>
+                                <td class="tdname" style="width: 210px">${o.nameProduct}</td>
+
+                                <td  class="tdquantity" style="width: 129px">
+                                    <button class="btn btn-primary btn-circle" style="text-align: center"><a class="add"
+                                                                                                             style="color: #FFFFFF;
+    font-size: 28px;
+    margin-left: -7px;
+    margin-top: -19px;
+    position: absolute;" href="/addProduct?id=${o.idProduct}">+</a></button>
+                                    &nbsp
+                                        ${o.quantity}&nbsp
+                                    <button class="btn btn-primary btn-circle" style="align-items: center"><a
+                                            class="sub" style="color: #FFFFFF; font-size: 41px;
+    margin-left: -6px;
+    margin-top: -30px;
+    position: absolute;" href="/subProduct?id=${o.idProduct}">-</a></button>
+                                    </button></td>
+                                <td class="tdprice" style="width: 104px">${o.price}</td>
+                                <td class="tdpricetotal" style="width: 145px">${o.quantity * o.price}</td>
                                 <td class="tdtrash">
-                                    <a href="/remove?id=${o.idProduct}"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="/remove?id=${o.idProduct}"><i class="fas fa-trash-alt" style="color: #FFFFFF"></i></a>
 
                                 </td>
 

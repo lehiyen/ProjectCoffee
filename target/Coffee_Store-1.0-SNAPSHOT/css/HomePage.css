@@ -33,12 +33,18 @@ body,html {
     width: 25px;
 
 }
-.fa-plus:before{
+.fa-plus :before{
+    justify-content: center;
+    align-items: center;
+    margin-left: -7px;
+    margin-top: -17px;
+}
+.fa-minus:before{
     justify-content: center;
     align-items: center;
     margin-left: -5px;
     position: absolute;
-    margin-top: -14px;
+    margin-top: -15px;
 }
 .fa-globe:before{
     justify-content: center;

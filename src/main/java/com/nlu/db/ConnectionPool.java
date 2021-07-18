@@ -44,14 +44,10 @@ public class ConnectionPool {
     //get connection from pool
     public synchronized Connection getConnectionFromPool() {
         Connection connection = null;
-        if (availableConnections.size() > 0 && availableConnections.size() <= DB_MAX_CONNECTION) {
             System.out.println(availableConnections.size());
             connection = availableConnections.get(0);
             availableConnections.remove(0);
             return connection;
-        }
-        System.out.println("Vui long doi");
-        return null;
 
     }
 //
