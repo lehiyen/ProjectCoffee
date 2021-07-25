@@ -17,12 +17,12 @@ public class ConnectionPool {
 
     private Connection createConnection() {
         try {
-//            Class.forName(DB_DRIVER);
-//            Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-//            return connection;
-            String dbUrl = System.getenv("JDBC_DATABASE_URL");
-            return DriverManager.getConnection(dbUrl);
-        } catch (SQLException e) {
+            Class.forName(DB_DRIVER);
+            Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+            return connection;
+//            String dbUrl = System.getenv("JDBC_DATABASE_URL");
+//            return DriverManager.getConnection(dbUrl);
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return null;
