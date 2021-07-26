@@ -20,9 +20,7 @@ public class ConnectionPool {
             Class.forName(DB_DRIVER);
             Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
             return connection;
-//            String dbUrl = System.getenv("JDBC_DATABASE_URL");
-//            return DriverManager.getConnection(dbUrl);
-        } catch (SQLException | ClassNotFoundException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
         return null;
