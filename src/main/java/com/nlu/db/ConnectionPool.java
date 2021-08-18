@@ -18,7 +18,7 @@ public class ConnectionPool {
     private Connection createConnection() {
         try {
             Class.forName(DB_DRIVER);
-            Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+            Connection connection = DriverManager.getConnection(CONNECTION_URL, USER_NAME, PASSWORD);
             return connection;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
