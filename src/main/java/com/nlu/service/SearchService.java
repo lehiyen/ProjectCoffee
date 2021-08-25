@@ -1,7 +1,6 @@
 package com.nlu.service;
 
 import com.nlu.model.Product;
-import com.nlu.repository.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,13 +10,8 @@ import java.util.List;
 import static com.nlu.db.DataSource.getConnection;
 import static com.nlu.db.DataSource.returnConnection;
 
-public class SearchService implements Repository<Product> {
-    @Override
-    public Collection<Product> findAll() throws SQLException {
-        return null;
-    }
+public class SearchService {
 
-    @Override
     public List<Product> findByName(String name) throws SQLException {
         List<Product> list = new ArrayList<>();
         String query = "SELECT * FROM product WHERE NameProduct LIKE ?";

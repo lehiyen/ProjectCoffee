@@ -14,15 +14,38 @@ import static com.nlu.db.DataSource.getConnection;
 import static com.nlu.db.DataSource.returnConnection;
 
 public class UserService {
-    public User getUser(String username, String password) {
+    public User getUserName(String username) {
+        Connection conn = getConnection();
+        String query = "SELECT * FROM user WHERE UserName= ?";
+        User user = new User();
+
+        try {
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                user = new User(rs.getString(1), rs.getString(2), rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6)
+                );
+                return user;
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+    public User getUser(String userName , String userPass) {
         Connection conn = getConnection();
         String query = "SELECT * FROM user WHERE UserName= ? AND MatKhau=?";
         User user = new User();
 
         try {
             PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, username);
-            ps.setString(2, password);
+            ps.setString(1, userName);
+            ps.setString(2, userPass);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 user = new User(rs.getString(1), rs.getString(2), rs.getString(3),

@@ -15,10 +15,10 @@ import static com.nlu.db.DataSource.returnConnection;
 public class CartService {
 
     public Product getByID(String id) {
-        PreparedStatement s = null;
         try {
             Connection conn = getConnection();
             String query = "SELECT * FROM product WHERE IDProduct = ?";
+            PreparedStatement s = conn.prepareStatement(query);
             s = conn.prepareStatement(query);
             s.setString(1,id);
             ResultSet rs = s.executeQuery();

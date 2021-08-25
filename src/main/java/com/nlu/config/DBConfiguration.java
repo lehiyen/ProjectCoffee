@@ -15,6 +15,6 @@ public static final String HOST_NAME = "remotemysql.com";
     public static final String PASSWORD = "HcfcUZ7K9P";
     public static final String DB_DRIVER = "com.mysql.cj.jdbc.Driver";
     public static final String CONNECTION_URL = "jdbc:mysql://" + HOST_NAME + ":" + DB_PORT + "/" + DB_NAME;
-    public static final int DB_MAX_CONNECTION = 15;
+    public static final int DB_MAX_CONNECTION = 30;
 
 }

@@ -1,7 +1,6 @@
 package com.nlu.service;
 
 import com.nlu.model.Product;
-import com.nlu.repository.Repository;
 
 import javax.swing.*;
 import java.sql.*;
@@ -11,7 +10,7 @@ import java.util.List;
 import static com.nlu.db.DataSource.getConnection;
 import static com.nlu.db.DataSource.returnConnection;
 
-public class ProductService implements Repository<Product> {
+public class ProductService  {
 
     public List<Product> findAll() {
         List<Product> list = new ArrayList<>();
@@ -39,12 +38,6 @@ public class ProductService implements Repository<Product> {
 
     }
 
-
-
-    @Override
-    public List<Product> findByName(String name) throws SQLException {
-        return null;
-    }
 
     public static void main(String[] args) {
         ProductService pr = new ProductService();

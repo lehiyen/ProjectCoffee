@@ -179,7 +179,7 @@
 
                     </div>
                     <div>
-                        <input type="submit" class="btn btn-lg btn-primary" value="Create Account">
+                        <input type="submit" class="btn btn-lg btn-primary" value="Tạo tài khoản">
                     </div>
                 </fieldset>
             </form>

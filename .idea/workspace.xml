@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Coffee_Store:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00b6b83b-d76a-4633-bc8f-0da180315645" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Coffee_Store.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Coffee_Store.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/config/DBConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/config/DBConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/service/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nlu/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nlu/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/LoginPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/LoginPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/store/signUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/store/signUp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee_Store-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee_Store-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Coffee_Store-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/config/DBConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/config/DBConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/AddAccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/AddAccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/AddProductIntoCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/AddProductIntoCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/CartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/ManangerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/ManangerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/RemoveCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/RemoveCartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/StoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/StoreController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/SubProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/SubProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/controller/ViewAccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/controller/ViewAccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/db/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/db/ConnectionPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/db/DataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/db/DataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/model/Cart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/model/Cart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/repository/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/service/CartService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/service/CartService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/service/SearchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/service/SearchService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nlu/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nlu/service/UserService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1xE2GOerfwO8I5ZaZxO4XbJ4s17" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 8.5.6" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.6" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8083/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Coffee_Store:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="899e6be4-6804-418e-9033-7272b7c2e72b" />
+        <option name="HTTP_PORT" value="8083" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="51070" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Coffee_Store:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00b6b83b-d76a-4633-bc8f-0da180315645" name="Default Changelist" comment="" />
+      <created>1629905837954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629905837954</updated>
+      <workItem from="1629905842829" duration="9280000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

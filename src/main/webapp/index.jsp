@@ -16,11 +16,12 @@
 <div class="main">
     <div class="sign"> <i class="fas fa-user"></i> </div>
     <form action="login" method="post" class="form1" >
-        <p class="text-danger"style="color: red;font-size: 16px;margin-left: 75px">${mess}</p>
+        <p class="text-danger"style="color: red;font-size: 16px;margin-left: 132px">${mess}</p>
         <input class="un " type="text" align="center" required placeholder="Tên người dùng" name="username"/>
+        <p class="text-danger"style="color: red;font-size: 16px;margin-left: 115px">${mess1}</p>
         <input class="pass" type="password" align="center" required placeholder="Mật khẩu" name="password"/>
-        <input value="login" type="submit" class="submit" ></input>
-        <a  class="forgot" align="center" href="">Forgot <i class = "fas fa-key"></i> </a>
+        <input value="Đăng nhập" type="submit" class="submit" ></input>
+        <a  class="forgot" align="center" href="">Quên <i class = "fas fa-key"></i> </a>
         <p class="hotline" align="center" >Hotline 0927007791<a href="#"></a> </p>
     </form>
 
